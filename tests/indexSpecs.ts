@@ -2,7 +2,7 @@
 import { response } from 'express';
 import supertest from 'supertest';
 
-import app from "../src/app";
+import app from '../src/server';
 
 describe('endpoint testing', () => {
   it('it should be able to test for endpoint', async () => {
