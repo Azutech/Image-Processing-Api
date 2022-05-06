@@ -3,11 +3,12 @@ import path from 'path';
 const filedir = process.cwd();
 
 const images: string[] = [
-  'fjord',
   'encenadaport',
-  'palmtunnel',
-  'santamonica',
+  'fjord',
   'icelandwaterfall',
+  'palmtunnel',
+  'santamonica'
+  
 ];
 
 const originalImgPath = path.join(filedir, '/images');
