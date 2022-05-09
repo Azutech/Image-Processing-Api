@@ -1,9 +1,8 @@
+"use strict";
 // /* eslint-disable import/extensions */
 // import { response } from 'express';
 // import supertest from 'supertest';
-
 // import app from '../src/server';
-
 // describe('endpoint testing', () => {
 //   it('it should be able to test for endpoint', async () => {
 //     const request = supertest(app);
@@ -13,7 +12,6 @@
 //     console.log(response.text);
 //   });
 // });
-
 // describe('/GET Response testing', () => {
 //   const data = {};
 //   beforeAll((done) => {
