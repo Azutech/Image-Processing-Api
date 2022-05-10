@@ -12,20 +12,14 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const sharp_1 = __importDefault(require("sharp"));
-const express_1 = require("express");
-const imageRoutes = (0, express_1.Router)();
-// endpoint
-imageRoutes.get('/images', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    try {
-        yield (0, sharp_1.default)('images/fjord.jpg')
-            .resize(300, 300)
-            .toFile('/images/resized-image/newpic.jpg');
-        res.send('Task Completed');
-    }
-    catch (error) {
-        console.log(error);
-        res.send('cant resize images');
-    }
-}));
-exports.default = imageRoutes;
+const supertest_1 = __importDefault(require("supertest"));
+const server_1 = __importDefault(require("../../src/server"));
+describe('endpoint testing', () => {
+    it('it should be able to test for endpoint', () => __awaiter(void 0, void 0, void 0, function* () {
+        const request = (0, supertest_1.default)(server_1.default);
+        const response = yield request.get('/');
+        console.log(response);
+        expect(response.status).toBe(200);
+        console.log(response.text);
+    }));
+});

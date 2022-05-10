@@ -27,6 +27,8 @@ fs.readdir('./images/', (err, files) => {
   }
 });
 
+
+// The sharp library implementation
 const resizeImages =  (req: Request, res: Response, next: NextFunction) => {
   try {
     if (images.length > 1) {
