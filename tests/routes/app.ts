@@ -1,7 +1,6 @@
-
 import supertest from 'supertest';
 
-import app from '../../src/server'
+import app from '../../src/server';
 
 describe('endpoint testing', () => {
   it('it should be able to test for endpoint', async () => {
@@ -12,4 +11,3 @@ describe('endpoint testing', () => {
     console.log(response.text);
   });
 });
-
